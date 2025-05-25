@@ -1,9 +1,10 @@
 # Password Manager
 
-A secure and user-friendly password management application built with Python and Tkinter. This application helps you store, generate, and manage your passwords in a safe and organized way.
+A secure password management application built with Python, available in both GUI and CLI versions. This application helps you store, generate, and manage your passwords in a safe and organized way.
 
 ## Features
 
+### GUI Version
 - Generate strong, random passwords
 - Store website credentials securely
 - Search for saved passwords
@@ -12,10 +13,17 @@ A secure and user-friendly password management application built with Python and
 - JSON-based secure storage
 - Input validation and error handling
 
+### CLI Version
+- Simple command-line interface
+- Add new passwords
+- View saved passwords
+- Text-based storage
+- Easy to use in terminal
+
 ## Requirements
 
 - Python 3.x
-- pyperclip==1.9.0
+- pyperclip==1.9.0 (for GUI version)
 
 ## Installation
 
@@ -32,13 +40,21 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the application:
+### GUI Version
+Run the GUI application:
 ```bash
-python main.py
+python password_manager_gui.py
+```
+
+### CLI Version
+Run the command-line application:
+```bash
+python password_manager_cli.py
 ```
 
 ### Features in Detail
 
+#### GUI Version
 1. **Password Generation**
    - Generates 12-character strong passwords
    - Includes uppercase letters, lowercase letters, numbers, and special characters
@@ -60,8 +76,19 @@ python main.py
    - Error messages for invalid inputs
    - Default email field for convenience
 
+#### CLI Version
+1. **Simple Commands**
+   - Type 'add' to add a new password
+   - Type 'view' to see existing passwords
+   - Type 'q' to quit
+
+2. **Password Storage**
+   - Stores passwords in a simple text file
+   - Easy to read and modify manually if needed
+
 ## Data Storage
 
+### GUI Version
 The application stores all passwords and credentials in a `data.json` file. The data is stored in the following format:
 
 ```json
@@ -73,12 +100,17 @@ The application stores all passwords and credentials in a `data.json` file. The 
 }
 ```
 
+### CLI Version
+The application stores passwords in a `passwords.txt` file in the format:
+```
+username|password
+```
+
 ## Security Features
 
 - Input validation to prevent empty submissions
-- Secure JSON storage
-- Strong password generation
-- No plain text password display in the interface
+- Strong password generation (GUI version)
+- No plain text password display in the interface (GUI version)
 
 ## Contributing
 
