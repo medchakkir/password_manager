@@ -29,7 +29,7 @@ A secure password management application built with Python, available in both GU
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/momed-ali01/password_manager.git
+git clone https://github.com/<username>/password_manager.git
 cd password_manager
 ```
 
